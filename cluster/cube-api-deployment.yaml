@@ -19,7 +19,7 @@ spec:
       containers:
         - env: # Refer to https://cube.dev/docs/reference/environment-variables for more options
             - name: CUBEJS_API_SECRET
-              value: <API_SECRET>
+              value: "55519f7e-3f0c-4340-9fde-37a84835b144"
             - name: CUBEJS_CUBESTORE_HOST
               value: "cubestore-router" # USING THIS CUBESTORE HOST BECAUSE THE CUBESTORE ROUTER SERVICE IS NAMED "CUBESTORE-ROUTER"
             - name: CUBEJS_DB_HOST
