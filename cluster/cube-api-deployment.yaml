@@ -23,18 +23,23 @@ spec:
             - name: CUBEJS_CUBESTORE_HOST
               value: "cubestore-router" # USING THIS CUBESTORE HOST BECAUSE THE CUBESTORE ROUTER SERVICE IS NAMED "CUBESTORE-ROUTER"
             - name: CUBEJS_DB_HOST
-              value: dpg-coe2o0gl5elc73812il0-a.oregon-postgres.render.com
+              value: host.docker.internal
+            - name: CUBEJS_DB_PORT
+              value: 8123
             - name: CUBEJS_DB_NAME
-              value: owm_postgres_onlk
+              value: users  
             - name: CUBEJS_DB_USER
-              value: owm_postgres_onlk_user
+              value: ""
             - name: CUBEJS_DB_PASS
-              valueFrom:
-                secretKeyRef:
-                  name: default
-                  key: pg-password
+              value: ""               
             - name: CUBEJS_DB_TYPE
-              value: postgres
+              value: clickhouse
+            - name: CUBEJS_DB_SSL
+              value: false
+            - name: CUBEJS_DB_SSL
+              value: false
+            - name: CUBEJS_WEB_SOCKETS
+              value: false
             - name: CUBEJS_DEV_MODE
               value: "true" # NEVER RUN DEV MODE IN K8S
             - name: CUBEJS_EXTERNAL_DEFAULT
