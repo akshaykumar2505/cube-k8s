@@ -6,3 +6,5 @@ metadata:
 spec:
   repo: https://github.com/akshaykumar2505/cube-k8s
   branch: main
+  paths:
+  - cluster
