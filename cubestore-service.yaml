@@ -15,8 +15,6 @@ spec:
     - name: "9999"
       port: 9999
       targetPort: 9999  
-  externalIPs: 
-    - 10.42.0.137
   selector:
     service: cubestore
 status:
