@@ -35,9 +35,7 @@ spec:
             - name: CUBEJS_DB_TYPE
               value: "clickhouse"
             - name: CUBEJS_DB_SSL
-              value: "false"
-            - name: CUBEJS_DB_SSL
-              value: "false"
+              value: "false"      
             - name: CUBEJS_WEB_SOCKETS
               value: "false"
             - name: CUBEJS_DEV_MODE
