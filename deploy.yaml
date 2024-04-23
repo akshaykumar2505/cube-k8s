@@ -1,0 +1,8 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: cube
+  namespace: fleet-local
+spec:
+  repo: https://github.com/akshaykumar2505/cube-k8s
+  branch: main
