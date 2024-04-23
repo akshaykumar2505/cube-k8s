@@ -29,9 +29,9 @@ spec:
             - name: CUBEJS_DB_NAME
               value: "users"
             - name: CUBEJS_DB_USER
-              value: <DB_USER>
+              value: ""
             - name: CUBEJS_DB_PASS
-              value: <DB_PASSWORD>
+              value: ""
             - name: CUBEJS_DB_TYPE
               value: "clickhouse"
             - name: CUBEJS_DEV_MODE
