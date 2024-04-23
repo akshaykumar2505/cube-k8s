@@ -38,6 +38,8 @@ spec:
               value: "true"
             - name: CUBEJS_REDIS_URL
               value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"
+            - name: CUBEJS_DEV_MODE
+              value: "true"
           image: cubejs/cube:v0.28.14
           name: cube-api
           ports:
