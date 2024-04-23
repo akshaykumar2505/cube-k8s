@@ -14,10 +14,9 @@ spec:
       targetPort: 3306
     - name: "9999"
       port: 9999
-      targetPort: 9999
-  # ONLY WORKS FOR MINIKUBE OR SINGLE INSTANCE K8S CLUSTER
-  # externalIPs: # EXPOSE EXTERNAL IP IF NEEDED
-  #   - xxx.yyy.zzz.www
+      targetPort: 9999  
+  externalIPs: 
+    - 0.0.0.0
   selector:
     service: cubestore
 status:
