@@ -19,25 +19,29 @@ spec:
       containers:
         - env: # Refer to https://cube.dev/docs/reference/environment-variables for more options
             - name: CUBEJS_API_SECRET
-              value: <API_SECRET>
+              value: "55519f7e-3f0c-4340-9fde-37a84835b144"
             - name: CUBEJS_CUBESTORE_HOST
               value: "cubestore-router" # USING THIS CUBESTORE HOST BECAUSE THE CUBESTORE ROUTER SERVICE IS NAMED "CUBESTORE-ROUTER"
             - name: CUBEJS_DB_HOST
-              value: <DB_HOST>
+              value: "host.docker.internal"
+            - name: CUBEJS_DB_PORT
+              value: "8123"  
             - name: CUBEJS_DB_NAME
-              value: <DB_NAME>
+              value: "users"
             - name: CUBEJS_DB_USER
-              value: <DB_USER>
+              value: ""
             - name: CUBEJS_DB_PASS
-              value: <DB_PASSWORD>
+              value: ""
             - name: CUBEJS_DB_TYPE
-              value: <DB_TYPE>
+              value: "clickhouse"
             - name: CUBEJS_DEV_MODE
-              value: "false" # NEVER RUN DEV MODE IN K8S
+              value: "true" # NEVER RUN DEV MODE IN K8S
             - name: CUBEJS_EXTERNAL_DEFAULT
               value: "true"
-            - name: CUBEJS_REDIS_URL
-              value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"
+            - name: CUBEJS_CACHE_AND_QUEUE_DRIVER
+              value: "memory"
+            #- name: CUBEJS_REDIS_URL
+            #  value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"
             # SPECIFY THIS INSTANCE TO ACT AS A REFRESH WORKER
             - name: CUBEJS_REFRESH_WORKER
               value: "true"
