@@ -19,25 +19,28 @@ spec:
       containers:
         - env: # Refer to https://cube.dev/docs/reference/environment-variables for more options
             - name: CUBEJS_API_SECRET
-              value: <API_SECRET>
+              value: 55519f7e-3f0c-4340-9fde-37a84835b144
             - name: CUBEJS_CUBESTORE_HOST
               value: "cubestore-router" # USING THIS CUBESTORE HOST BECAUSE THE CUBESTORE ROUTER SERVICE IS NAMED "CUBESTORE-ROUTER"
             - name: CUBEJS_DB_HOST
-              value: <DB_HOST>
+              value: dpg-coe2o0gl5elc73812il0-a.oregon-postgres.render.com
             - name: CUBEJS_DB_NAME
-              value: <DB_NAME>
+              value: owm_postgres_onlk
             - name: CUBEJS_DB_USER
-              value: <DB_USER>
+              value: owm_postgres_onlk_user
             - name: CUBEJS_DB_PASS
-              value: <DB_PASSWORD>
+              valueFrom:
+                secretKeyRef:
+                  name: default
+                  key: pg-password
             - name: CUBEJS_DB_TYPE
-              value: <DB_TYPE>
+              value: postgres
             - name: CUBEJS_DEV_MODE
-              value: "false" # NEVER RUN DEV MODE IN K8S
+              value: "true" # NEVER RUN DEV MODE IN K8S
             - name: CUBEJS_EXTERNAL_DEFAULT
               value: "true"
             - name: CUBEJS_REDIS_URL
-              value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"
+              value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"           
           image: cubejs/cube:v0.28.14
           name: cube-api
           ports:
