@@ -51,6 +51,7 @@ spec:
           volumeMounts:
             - mountPath: /cube/conf/schema
               name: cube-api-schema
+              readOnly: false
       restartPolicy: Always
       volumes:
         - name: cube-api-schema
