@@ -46,6 +46,7 @@ spec:
             - name: CUBEJS_REFRESH_WORKER
               value: "true"
           image: mycube:latest
+          imagePullPolicy: Never
           name: cube-refresh-worker
           resources: {}
           volumeMounts:
