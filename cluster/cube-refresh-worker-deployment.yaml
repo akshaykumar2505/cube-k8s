@@ -45,17 +45,9 @@ spec:
             # SPECIFY THIS INSTANCE TO ACT AS A REFRESH WORKER
             - name: CUBEJS_REFRESH_WORKER
               value: "true"
-          image: mycube:test2
+          image: mycube:test3
           imagePullPolicy: Never
           name: cube-refresh-worker
-          resources: {}
-          volumeMounts:
-            - mountPath: /cube/conf/schema
-              name: cube-api-schema
-              readOnly: false
-      restartPolicy: Always
-      volumes:
-        - name: cube-api-schema
-          configMap:
-            name: cube-api-schema
+          resources: {}          
+      restartPolicy: Always      
 status: {}
