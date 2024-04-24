@@ -45,7 +45,7 @@ spec:
             # SPECIFY THIS INSTANCE TO ACT AS A REFRESH WORKER
             - name: CUBEJS_REFRESH_WORKER
               value: "true"
-          image: mycube:latest
+          image: mycube:test2
           imagePullPolicy: Never
           name: cube-refresh-worker
           resources: {}
