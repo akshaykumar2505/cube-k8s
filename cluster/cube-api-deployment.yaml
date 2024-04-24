@@ -50,7 +50,7 @@ spec:
             - containerPort: 4000
           resources: {}
           volumeMounts:
-            - mountPath: /cube/conf
+            - mountPath: /cube/conf/schema
               name: cube-api-schema
               readOnly: false
       restartPolicy: Always
