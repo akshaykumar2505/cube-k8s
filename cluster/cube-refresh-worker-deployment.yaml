@@ -50,7 +50,7 @@ spec:
           name: cube-refresh-worker
           resources: {}
           volumeMounts:
-            - mountPath: /cube/conf
+            - mountPath: /cube/conf/schema
               name: cube-api-schema
               readOnly: false
       restartPolicy: Always
