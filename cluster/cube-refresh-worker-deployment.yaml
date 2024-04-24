@@ -45,7 +45,7 @@ spec:
             # SPECIFY THIS INSTANCE TO ACT AS A REFRESH WORKER
             - name: CUBEJS_REFRESH_WORKER
               value: "true"
-          image: cubejs/cube:v0.28.14
+          image: mycube:latest
           name: cube-refresh-worker
           resources: {}
           volumeMounts:
