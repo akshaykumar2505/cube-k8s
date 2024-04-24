@@ -42,7 +42,7 @@ spec:
               value: "memory"
             #- name: CUBEJS_REDIS_URL
             #  value: redis://redis:6379 # USING THIS REDIS URL BECAUSE THE REDIS SERVICE IS NAMED "REDIS"
-          image: mycube:test2
+          image: mycube:test3
           imagePullPolicy: Never
           name: cube-api
           ports:
